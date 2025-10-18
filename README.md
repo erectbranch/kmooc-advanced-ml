@@ -19,6 +19,8 @@ Lecture notes for courses [Advanced machine learning](https://www.kmooc.kr/view/
 
 ## Lecture Notes
 
+- [Graphical Model(GM)](lec01/README.md)
+
 ## :mag: Syllabus
 
 ### 1. Graphical Model
