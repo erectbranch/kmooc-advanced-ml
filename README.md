@@ -21,6 +21,12 @@ Lecture notes for courses [Advanced machine learning](https://www.kmooc.kr/view/
 
 - [Graphical Model(GM)](lec01/README.md)
 
+  > Probability, Conditional Probability, Bayesian Reasoning, Independence
+
+- [Bayesian Network (1)](lec02/README.md)
+
+  > Probabilistic Reasoning, Bayesian Network
+
 ## :mag: Syllabus
 
 ### 1. Graphical Model
