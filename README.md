@@ -23,9 +23,13 @@ Lecture notes for courses [Advanced machine learning](https://www.kmooc.kr/view/
 
   > Probability, Conditional Probability, Bayesian Reasoning, Independence
 
-- [Bayesian Network (1)](lec02/README.md)
+- [Bayesian Network Overview](lec02/README.md)
 
   > Probabilistic Reasoning, Bayesian Network
+
+- [Non-Linear SVM](lec09/README.md)
+
+  > Non-Linear SVM, Kernel Trick
 
 ## :mag: Syllabus
 
