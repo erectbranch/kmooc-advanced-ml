@@ -86,11 +86,11 @@ $$ \mathrm{subject\ to} \sum_{i=1}^5 a_i y_i = 0 \quad 0 \le a_i \le C $$
 
 Non-Linear SVM의 목표는 엄밀하게는, (mapping 자체가 아닌) mapping 후의 내적 값이다. 다음 예시를 보자.
 
-- $\mathbf{x}_1 = (x_{11}, x_{12}) , \mathbf{x}_2 = (x_{21}, x_{22})$
+- $\mathbf{x_1} = (x_{11}, x_{12}) , \mathbf{x_2} = (x_{21}, x_{22})$
 
-- $\Phi(\mathbf{x}_1) = (1, \sqrt{3} x_{11}, \sqrt{3} x_{12}, \sqrt{3} x_{11}^2, \sqrt{3} x_{12}^2, x_{11}^3, x_{12}^3, \sqrt{6} x_{11} x_{12}, \sqrt{3} x_{11} x_{12}^2, \sqrt{3} x_{11}^2 x_{12})$
+- $\Phi(\mathbf{x_1}) = (1, \sqrt{3} x_{11}, \sqrt{3} x_{12}, \sqrt{3} x_{11}^2, \sqrt{3} x_{12}^2, x_{11}^3, x_{12}^3, \sqrt{6} x_{11} x_{12}, \sqrt{3} x_{11} x_{12}^2, \sqrt{3} x_{11}^2 x_{12})$
 
-- $\Phi(\mathbf{x}_2) = (1, \sqrt{3} x_{21}, \sqrt{3} x_{22}, \sqrt{3} x_{21}^2, \sqrt{3} x_{22}^2, x_{21}^3, x_{22}^3, \sqrt{6} x_{21} x_{22}, \sqrt{3} x_{21} x_{22}^2, \sqrt{3} x_{21}^2 x_{22})$
+- $\Phi(\mathbf{x_2}) = (1, \sqrt{3} x_{21}, \sqrt{3} x_{22}, \sqrt{3} x_{21}^2, \sqrt{3} x_{22}^2, x_{21}^3, x_{22}^3, \sqrt{6} x_{21} x_{22}, \sqrt{3} x_{21} x_{22}^2, \sqrt{3} x_{21}^2 x_{22})$
 
 둘을 내적하면 다음과 같다.
 
@@ -130,11 +130,9 @@ $$ w = \sum_{i=1}^n a_i y_i \Phi(\mathbf{x}_i) $$
 
 $$ b = y_k - \sum_{i=1}^n a_i y_i K(\mathbf{x}_i, \mathbf{x}_k) $$
 
-> (Prediction) unknown x를 대상으로는 다음과 같이 예측할 수 있다.
->
-> class of $\mathbf{x} = \begin{cases} +1 & \text{if } y(\mathbf{x}) \ge 0 \\ -1 & \text{otherwise} \end{cases}$
->
-> where $y(\mathbf{x}) = \sum_{i=1}^n a_i y_i K(\mathbf{x}_i, \mathbf{x}) + b$
+(Prediction) unknown x를 다음과 같이 예측할 수 있다. ( $y(\mathbf{x}) \ge 0$ 일 때 +1, 그렇지 않으면 -1 )
+
+$$y(\mathbf{x}) = \sum_{i=1}^n a_i y_i K(\mathbf{x}_i, \mathbf{x}) + b$$
 
 ---
 
