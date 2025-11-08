@@ -31,6 +31,10 @@ Lecture notes for courses [Advanced machine learning](https://www.kmooc.kr/view/
 
   > Non-Linear SVM, Kernel Trick
 
+- [Gaussian Process](lec12/README.md)
+
+  > Gaussian Distribution, Covariance Matrix, Gaussian Process
+
 ## :mag: Syllabus
 
 ### 1. Graphical Model
