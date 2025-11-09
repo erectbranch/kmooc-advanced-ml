@@ -32,19 +32,19 @@ $$ f(\boldsymbol{x}) = \frac{1}{(2\pi)^{m/2} ||\boldsymbol{\Sigma}||^{1/2}} \exp
 >
 > 공분산은 두 개의 축(변수) X, Y 사이의 관계를 나타내는 척도로, XY의 평균 - X의 평균 * Y의 평균으로 정의한다.
 >
-> $\mathrm{cov}(X, Y) = {\sigma}_{XY}^2 = E(XY) - {\mu}_X {\mu}_Y$
+> $\mathrm{cov}(X, Y) = \sigma_{XY}^2 = E(XY) - \mu_X {\mu}_Y$
 >
-> $\quad = E[(X - {\mu}_X)(Y - {\mu}_Y)] = \frac{1}{2} \sum_{i=1}^n (X_i - {\mu}_X)(Y_i - {\mu}_Y)$
+> $\quad = E[(X - \mu_X)(Y - \mu_Y)] = \frac{1}{2} \sum_{i=1}^n (X_i - \mu_X)(Y_i - \mu_Y)$
 
 이렇게 모든 축에 대한 공분산을 행렬로 묶은 것이 **covariance matrix**(공분산 행렬)이다.
 
-- $ {\sigma}_{i, j} = {\sigma}_{X_i, X_j}$ 이며, ${\sigma}_{i, j} = {\sigma}_{j, i}$ 과 같이 대칭 행렬이다.
+- $\sigma_{i, j} = \sigma_{X_i, X_j}$ 이며, $\sigma_{i, j} = \sigma_{j, i}$ 과 같이 대칭 행렬이다.
 
 $$ \Sigma = \begin{bmatrix} 
-{\sigma}_{1,1}^2 & {\sigma}_{1,2}^2 & \cdots & {\sigma}_{1,k}^2 \\ 
-{\sigma}_{2,1}^2 & {\sigma}_{2,2}^2 & \cdots & {\sigma}_{2,k}^2 \\
+\sigma_{1,1}^2 & \sigma_{1,2}^2 & \cdots & \sigma_{1,k}^2 \\ 
+\sigma_{2,1}^2 & \sigma_{2,2}^2 & \cdots & \sigma_{2,k}^2 \\
 \vdots & \vdots & \ddots & \vdots \\ 
-{\sigma}_{k,1}^2 & {\sigma}_{k,2}^2 & \cdots & {\sigma}_{k,k}^2
+\sigma_{k,1}^2 & \sigma_{k,2}^2 & \cdots & \sigma_{k,k}^2
 \end{bmatrix} $$
 
 > (첫 번째 축, 첫 번째 축), (첫 번째 축, 두 번째 축), ..., (첫 번째 축, k번째 축) 이후 (두 번째 축, 첫 번째 축), (두 번째 축, 두 번째 축), ..., (두 번째 축, k번째 축), ...
@@ -176,20 +176,20 @@ GP는 joint Gaussian distribution으로 정의되며, $y_1, y_2, \cdots, y_n$ �
 
 - Given Training Data $D = \{(x_1, y_1), (x_2, y_2), \cdots, (x_N, y_N)\}$
 
-- Test Data $D_* = \{({\alpha}_1, {\beta}_1), ({\alpha}_2, {\beta}_2), \cdots, ({\alpha}_{N_*}, {\beta}_{N_*})\}$
+- Test Data $D_\ast = \{(\alpha_1, \beta_1), (\alpha_2, \beta_2), \cdots, (\alpha_{N_\ast}, \beta_{N_\ast})\}$
 
 이때 평균이 0이며 분산에 대한 함수는 kernel $\kappa$ 로 주어진다고 하면, **Posterior Gaussian Process**를 정의할 수 있다.
 
 - **Assumption**
 
-$$ \begin{pmatrix} \boldsymbol{Y} \\ \boldsymbol{Y_*} \end{pmatrix} \sim \mathcal{N} \left( \begin{pmatrix} 0 \\ 0 \end{pmatrix}, \begin{pmatrix} \kappa(X, X) & \kappa(X, X_*) \\ \kappa(X_*, X) & \kappa(X_*, X_*) \end{pmatrix} \right) $$
+$$ \begin{pmatrix} \boldsymbol{Y} \\ \boldsymbol{Y_\ast} \end{pmatrix} \sim \mathcal{N} \left( \begin{pmatrix} 0 \\ 0 \end{pmatrix}, \begin{pmatrix} \kappa(X, X) & \kappa(X, X_\ast) \\ \kappa(X_\ast, X) & \kappa(X_\ast, X_\ast) \end{pmatrix} \right) $$
 
 - **Posterior GP**
 
-$$ P(\boldsymbol{Y_*} | \boldsymbol{Y}, X, Y) = \mathcal{N}(\boldsymbol{\mu_*}, \boldsymbol{\Sigma_*}) $$
+$$ P(\boldsymbol{Y_\ast} | \boldsymbol{Y}, X, Y) = \mathcal{N}(\boldsymbol{\mu_\ast}, \boldsymbol{\Sigma_\ast}) $$
 
-$$ \boldsymbol{\mu_*} = \kappa(X_*, X) \kappa(X, X)^{-1} \boldsymbol{Y} $$
+$$ \boldsymbol{\mu_\ast} = \kappa(X_\ast, X) \kappa(X, X)^{-1} \boldsymbol{Y} $$
 
-$$ \boldsymbol{\Sigma_*} = \kappa(X_*, X_*) - \kappa(X_*, X) \kappa(X, X)^{-1} \kappa(X, X_*) $$
+$$ \boldsymbol{\Sigma_\ast} = \kappa(X_\ast, X_\ast) - \kappa(X_\ast, X) \kappa(X, X)^{-1} \kappa(X, X_\ast) $$
 
 ---
