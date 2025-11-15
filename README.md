@@ -35,6 +35,10 @@ Lecture notes for courses [Advanced machine learning](https://www.kmooc.kr/view/
 
   > Gaussian Distribution, Covariance Matrix, Gaussian Process
 
+- [Singular Value Decomposition(SVD)](lec13/summary01/README.md)
+
+  > Linear Transformation, eigenvalue, eigenvector, Singular Value Decomposition
+
 ## :mag: Syllabus
 
 ### 1. Graphical Model
