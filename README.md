@@ -39,6 +39,10 @@ Lecture notes for courses [Advanced machine learning](https://www.kmooc.kr/view/
 
   > Linear Transformation, eigenvalue, eigenvector, Singular Value Decomposition
 
+- [Gaussian Mixture Model(GMM)](lec14/summary01/README.md)
+
+  > Gaussian Mixture Model
+
 ## :mag: Syllabus
 
 ### 1. Graphical Model
