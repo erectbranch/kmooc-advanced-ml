@@ -43,6 +43,10 @@ Lecture notes for courses [Advanced machine learning](https://www.kmooc.kr/view/
 
   > Gaussian Mixture Model
 
+- [Expectation-Maximization(EM) Algorithm](lec14/summary02/README.md)
+
+  > Expectation-Maximization Algorithm, Jensen's Inequality, GMM by EM Algorithm
+
 ## :mag: Syllabus
 
 ### 1. Graphical Model
