@@ -19,31 +19,31 @@ Lecture notes for courses [Advanced machine learning](https://www.kmooc.kr/view/
 
 ## Lecture Notes
 
-- [Graphical Model(GM)](lec01/README.md)
+- [Graphical Model(GM)](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec01/README.md)
 
   > Probability, Conditional Probability, Bayesian Reasoning, Independence
 
-- [Bayesian Network Overview](lec02/README.md)
+- [Bayesian Network Overview](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec02/README.md)
 
   > Probabilistic Reasoning, Bayesian Network
 
-- [Non-Linear SVM](lec09/README.md)
+- [Non-Linear SVM](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec09/README.md)
 
   > Non-Linear SVM, Kernel Trick
 
-- [Gaussian Process](lec12/README.md)
+- [Gaussian Process](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec12/README.md)
 
   > Gaussian Distribution, Covariance Matrix, Gaussian Process
 
-- [Singular Value Decomposition(SVD)](lec13/summary01/README.md)
+- [Singular Value Decomposition(SVD)](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec13/summary01/README.md)
 
   > Linear Transformation, eigenvalue, eigenvector, Singular Value Decomposition
 
-- [Gaussian Mixture Model(GMM)](lec14/summary01/README.md)
+- [Gaussian Mixture Model(GMM)](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec14/summary01/README.md)
 
   > Gaussian Mixture Model
 
-- [Expectation-Maximization(EM) Algorithm](lec14/summary02/README.md)
+- [Expectation-Maximization(EM) Algorithm](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec14/summary02/README.md)
 
   > Expectation-Maximization Algorithm, Jensen's Inequality, GMM by EM Algorithm
 
