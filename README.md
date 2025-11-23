@@ -19,31 +19,31 @@ Lecture notes for courses [Advanced machine learning](https://www.kmooc.kr/view/
 
 ## Lecture Notes
 
-- [Graphical Model(GM)](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec01/README.md)
+- [Graphical Model(GM)](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec01)
 
   > Probability, Conditional Probability, Bayesian Reasoning, Independence
 
-- [Bayesian Network Overview](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec02/README.md)
+- [Bayesian Network Overview](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec02)
 
   > Probabilistic Reasoning, Bayesian Network
 
-- [Non-Linear SVM](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec09/README.md)
+- [Non-Linear SVM](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec09)
 
   > Non-Linear SVM, Kernel Trick
 
-- [Gaussian Process](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec12/README.md)
+- [Gaussian Process](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec12)
 
   > Gaussian Distribution, Covariance Matrix, Gaussian Process
 
-- [Singular Value Decomposition(SVD)](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec13/summary01/README.md)
+- [Singular Value Decomposition(SVD)](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec13/summary01)
 
   > Linear Transformation, eigenvalue, eigenvector, Singular Value Decomposition
 
-- [Gaussian Mixture Model(GMM)](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec14/summary01/README.md)
+- [Gaussian Mixture Model(GMM)](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec14/summary01)
 
   > Gaussian Mixture Model
 
-- [Expectation-Maximization(EM) Algorithm](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec14/summary02/README.md)
+- [Expectation-Maximization(EM) Algorithm](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec14/summary02)
 
   > Expectation-Maximization Algorithm, Jensen's Inequality, GMM by EM Algorithm
 
