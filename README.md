@@ -27,6 +27,10 @@ Lecture notes for courses [Advanced machine learning](https://www.kmooc.kr/view/
 
   > Probabilistic Reasoning, Bayesian Network
 
+- [Hidden Markov Model Overview](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec04)
+
+  > Markov Model, Hidden Markov Model
+
 - [Non-Linear SVM](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec09)
 
   > Non-Linear SVM, Kernel Trick
