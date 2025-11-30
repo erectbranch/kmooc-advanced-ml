@@ -43,6 +43,10 @@ Lecture notes for courses [Advanced machine learning](https://www.kmooc.kr/view/
 
   > Linear Transformation, eigenvalue, eigenvector, Singular Value Decomposition
 
+- [Matrix Factorization](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec13/summary02)
+
+  > Matrix Factorization Variations
+
 - [Gaussian Mixture Model(GMM)](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec14/summary01)
 
   > Gaussian Mixture Model
