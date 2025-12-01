@@ -35,7 +35,7 @@ $$ \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmat
 | :---: | :---: |
 | ![linear transform example](images/linear_transform_1.png) | ![linear transform example](images/linear_transform_2.png) |
 
-<span style="color:green">초록색</span>과 <span style="color:red">빨간색</span> 벡터는 변환 후 방향이 변하지 않았다. 이러한 벡터를 **eigenvector**라고 한다. 이때 바뀌는 길이에 해당하는 값을 **eigenvalue**라고 한다.
+<span style="color:green">초록색</span>과 <span style="color:red">빨간색</span> 벡터는 변환 후 방향이 변하지 않았다. 이러한 벡터를 **eigenvector**라고 한다. 이때 바뀐 길이를 **eigenvalue**라고 한다.
 
 $$ A \mathbf{x} = \lambda \mathbf{x} $$
 
@@ -53,13 +53,13 @@ $$ \lambda_1 \rightarrow \boldsymbol{v_1} = \begin{pmatrix} v_{11} \\ v_{21} \\ 
 
 $$ \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \lambda \begin{pmatrix} x \\ y \end{pmatrix} $$
 
-변환 후 벡터의 방향은 바뀌지 않고 길이만 바뀌므로, 다음과 같은 식을 풀이하면 된다.
+변환 후 벡터의 방향은 동일하고 길이만 바뀐다면, 수식은 다음과 같다.
 
 $$ \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} - \lambda \cdot \mathbf{I} \begin{pmatrix} x \\ y \end{pmatrix} = 0 $$
 
 $$  \begin{pmatrix} 2 - \lambda & 1 \\ 1 & 2 - \lambda \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = 0 $$
 
-이러한 일차 연립방정식이 무한히 많은 해를 가지려면, determinant가 0이어야 한다.
+이러한 일차 연립방정식이 무한히 많은 해를 가지려면, determinant는 0이어야 한다.
 
 $$ \det \begin{pmatrix} 2 - \lambda & 1 \\ 1 & 2 - \lambda \end{pmatrix} = (2 - \lambda)^2 - 1 = 0 $$
 
@@ -67,9 +67,9 @@ $$ \lambda = 3, \quad (x, y) = (t, t) $$
 
 $$ \lambda = 1, \quad (x, y) = (t, -t) $$
 
-> eigenvector는 방향만 의미하기 때문에 $(t,t)$ 과 같이 표기한다. (편의상 길이가 1인 unit vector로 주로 표현)
+> eigenvector는 방향을 의미하기 때문에 $(t,t)$ 과 같이 표기한다. (편의상 길이=1인 unit vector로 표현)
 
-다음은 주요 eigenvalue, eigenvector의 성질이다.
+다음은 eigenvalue, eigenvector의 주요 성질이다.
 
 1. Eigenvector는 서로 직교한다.
 
@@ -88,11 +88,11 @@ $$ S = (\boldsymbol{v_1} \quad \boldsymbol{v_2} \quad \cdots \quad \boldsymbol{v
 
 - (normalized) eigenvector 길이가 1이므로, 각 column의 길이는 모두 1이다.
 
-- eigenvector가 모두 수직이므로, 모든 column이 서로 직교한다.
+- eigenvector는 서로 직교하므로, 모든 column은 서로 수직 관계이다.
 
-따라서 $S$ 벡터는 orthogonal matrix이다. 즉, $S^T S = I$ 이다.
+따라서 $S$ 벡터는 **orthogonal matrix**(직교 행렬)이다. ( $S^T S = I$ )
 
-위 $S$ 를 행렬 $A$에 곱해보자.
+이어서, 행렬 $A$ 에 $S$ 벡터를 곱해보자.
 
 $$ AS = A (\boldsymbol{v_1} \quad \boldsymbol{v_2} \quad \cdots \quad \boldsymbol{v_n}) = (A\boldsymbol{v_1} \quad A\boldsymbol{v_2} \quad \cdots \quad A\boldsymbol{v_n}) $$
 
@@ -102,21 +102,21 @@ $$ = (\boldsymbol{v_1} \quad \boldsymbol{v_2} \quad \cdots \quad \boldsymbol{v_n
 
 이처럼 대각선으로만 eigenvalue $\lambda$ 가 존재하는 $\Lambda$ 행렬로 decomposition된다. ( $AS = S \Lambda$ )
 
-이때, $S$ 는 invertible하므로 다음과 같이 정리할 수 있다. 
-
-$$ A = S \Lambda S^{-1} $$
-
-$$ A = S \Lambda S^T $$
-
-> **Notes**: 이처럼 정방 행렬은 은 이처럼 세 개의 행렬로 decomposition할 수 있다.
+> **Notes**: 이처럼 square matrix(정방 행렬)은 세 개의 행렬로 decomposition할 수 있다.
+>
+> - $S$ : invertible
+>
+> $$ A = S \Lambda S^{-1} $$
+>
+> $$ A = S \Lambda S^T $$
 
 ---
 
 ### 13.3.1 SVD for Non-square Matrix
 
-수학적 증명이 다소 복잡하기 때문에, 직관적인 설명으로 대체할 것이다. 
+수학적 증명은 다소 복잡하기 때문에 직관적인 설명으로 살펴보자.
 
-- $A$ 가 정방행렬이 아니더라도, $A ^T A$ 와 $A A^T$ 는 정방행렬이 된다. (즉, decomposition 가능)
+- $A$ 가 정방 행렬이 아니더라도, $A ^T A$ 와 $A A^T$ 는 정방 행렬이다. (즉, decomposition 가능)
 
 $$A^TA = V \Lambda_1 V^T, \quad AA^T = U \Lambda_2 U^T$$
 
@@ -128,6 +128,8 @@ $$ C^T C = (U \Sigma V^T)^T U \Sigma V^T = V \Sigma^T U^T U \Sigma V^T = V \Sigm
 
 - $C$ 값은 $A$ 와 동일하다. (자세한 증명은 생략)
 
-정리하자면, $A$ 는 $U \Sigma V^T$ 형태로 분해할 수 있다. 이때의 sigma 행렬을 **singular value**라고 지칭한다.
+정리하자면, 정방 행렬이 아닌 $A$ 도 $U \Sigma V^T$ 형태로 분해할 수 있다. 
+
+> $\Sigma$ 행렬의 대각선 element를 **singular value**(특이값)라고 지칭한다.
 
 ---

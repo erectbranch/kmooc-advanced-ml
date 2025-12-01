@@ -1,4 +1,4 @@
-# 13 Matrix Factorization
+# 13 Matrix Factorization by Optimization
 
 > GPU를 활용한 병렬화가 용이하다.
 
@@ -45,9 +45,11 @@ $$ \underset{U, V}{\arg \min} E(U, V) = \sum_{m, n} (R_{mn} - R'_{mn})^2 + \lamb
 
 {
 
-$\quad$ *for all m and p*, $U_{mp}^{t+1} = U_{mp}^t - \lambda \left( \frac{\partial E(U,V)}{\partial U_{mp}} \right)_{U_{mp}=U_{mp}^t}$
+$\quad$ *for all m and p*, 
+$U_{mp}^{t+1} = U_{mp}^t - \lambda {\left( \frac{\partial E(U,V)}{\partial U_{mp}} \right)}_{U{mp} = U^t{mp}}$
 
-$\quad$ *for all p and n*, $V_{pn}^{t+1} = V_{pn}^t - \lambda \left( \frac{\partial E(U,V)}{\partial V_{pn}} \right)_{V_{pn}=V_{pn}^t}$
+$\quad$ *for all p and n*, 
+$V_{pn}^{t+1} = V_{pn}^t - \lambda \left( \frac{\partial E(U,V)}{\partial V_{pn}} \right)_{V{pn}=V^t{pn}}$
 
 }
 
