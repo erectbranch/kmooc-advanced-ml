@@ -10,19 +10,21 @@ A와 B가 사건(event)이라고 하자.
 
 - If $A \subseteq B \subseteq U$ then $0 \leq P(A) \leq P(B) \leq 1$
 
-  A 사건이 B 사건에 포함되어 있다면, A 사건이 일어날 확률은 B 사건이 일어날 확률보다 작거나 같다.
+  A 사건이 B 사건에 포함되어 있다면, A가 일어날 확률은 B가 일어날 확률보다 작거나 같다.
 
   ---
 
 - If $A, B \subseteq U$ then $P(A,B) + P(A,\lnot B) = P(A)$ (두 가지 곱사건을 활용한 확률 계산) 
 
-  P(A,B) : A와 B가 동시에 일어날 확률, P(A,¬B) : A는 일어나고 B는 일어나지 않을 확률로, 두 확률을 더하면 A가 일어날 확률이 된다.
+  P(A,B) : A와 B가 동시에 일어날 확률, P(A,¬B) : A는 일어나고 B는 일어나지 않을 확률
+  
+  두 확률을 더하면 A가 일어날 확률이 된다.
 
   ---
 
 - If $A, B \subseteq U$ then $P(A \ or \ B) = P(A) + P(B) - P(A,B)$ (조건을 갖는 확률)
 
-  A 또는 B가 일어날 확률은, A가 일어날 확률과 B가 일어날 확률을 더한 후, A와 B가 동시에 일어날 확률을 빼준 값이다.
+  A 또는 B가 일어날 확률은, A가 일어날 확률과 B가 일어날 확률을 더한 값에, A와 B가 동시에 일어날 확률을 뺀 값이다.
 
   ---
 
@@ -32,27 +34,27 @@ A와 B가 사건(event)이라고 하자.
 
 ![total probability](images/total_prob.png)
 
-  > (비유) 바게트 잘라먹기. P(A)를 구하기 어려울 때, 더 쉬운 각 조각 단위에서 확률을 구하려는 목적.
+  > (비유: 바게트 잘라먹기) P(A)를 구하기 어려울 때, 계산하기 쉬운 조각 단위로 확률을 구하려는 목적.
 
 ---
 
 ## 1.2 Conditional Probability
 
-> e.g., Bayesian Approach는 조건부 확률에 기반한 방법론
+> c.f., Bayesian Approach는 조건부 확률에 기반하는 방법론이다.
 
-P(A given B), B가 일어났을 때(일어났다고 가정할 때) A가 일어날 확률을 의미한다.
+**P(A given B)**, B가 일어났을 때(일어났다고 가정할 때) A가 일어날 확률을 의미한다.
 
 $$ P(A|B) = \frac{P(A,B)}{P(B)} $$
 
-B가 일어났다고 가정한 것으로, 사실상 해당 조건부 확률은 **B가 전체집합**이 된다. (따라서, 분모로 들어가게 된다.) 그리고, A와 B가 동시에 일어날 확률이 분자에 들어가게 된다.
+B가 일어났다고 가정한 것으로, 사실상 해당 조건부 확률에서 **B가 전체집합**이 된다. (따라서, 분모로 들어가게 된다.) 그리고, A와 B가 동시에 일어날 확률은 분자가 된다.
+
+> Given은, 분모의 전체집합이 변경되는 것이라고 이해할 수 있다.
 
 ---
 
 ### 1.2.1 Variations
 
-> Given은, 분모의 전체집합이 변경되는 것으로 생각할 수 있다.
-
-(1) B, C가 일어났을 때 A가 일어날 확률.
+**(1)** B, C가 일어났을 때 A가 일어날 확률.
 
 $$ P(A|B,C) = \frac{P(A,B,C)}{P(B,C)} $$
 
@@ -60,19 +62,19 @@ $$ P(A|B,C) = \frac{P(A,B,C)}{P(B,C)} $$
 
 $$ P(A|B,C) = \frac{P(A,B|C)}{P(B|C)} $$
 
-(2) If $A \subseteq B \subseteq U$ then
+**(2)** If $A \subseteq B \subseteq U$ then
 
 $$ 0 \le P(A|C) \le P(B|C) \le 1 $$
 
-(3) If $A, B \subseteq U$ then
+**(3)** If $A, B \subseteq U$ then
 
 $$ P(A,B|C) + P(A,\lnot B|C) = P(A|C) $$
 
-(4) If $A, B \subseteq U$ then
+**(4)** If $A, B \subseteq U$ then
 
 $$ P(A \ or \ B|C) = P(A|C) + P(B|C) - P(A,B|C) $$
 
-> 조건부 확률을 응용해 다음과 같은 공식도 획득할 수 있다.
+> 조건부 확률을 응용하여 다음 공식을 도출할 수 있다.
 >
 > $P(A) = P(A, H_1)+ P(A, H_2) + ... + P(A, H_n)$
 >
@@ -90,11 +92,11 @@ $$ P(A,B,C,D) = P(A|B,C,D)P(B|C,D)P(C|D)P(D) $$
 
 ### 1.2.2 Prior vs. Posterior Probability
 
-prior probabilty는 아무런 증거(evidence) 없이 사전지식만으로 판단한다. 
+**prior probability**는 아무런 증거(evidence) 없이 사전지식만으로 판단한다.
 
 - P(event). 예를 들어 주사위를 던졌을 때, 1의 눈이 나올 확률은 사전지식이 없으므로 1/6
 
-그러나, 예를 들어 어느 주사위를 던졌을 때 10번 모두 1의 눈이 나왔다고 하자. posterior probability는 이러한 증거를 바탕으로 판단한다. (조건부 확률과 거의 동의어)
+그러나, 예를 들어 어느 주사위를 던졌을 때 10번 모두 1의 눈이 나왔다고 하자. **posterior probability**는 이러한 증거를 바탕으로 판단한다. (조건부 확률과 거의 동의어)
 
 - P(event|evidence).
 
@@ -154,7 +156,7 @@ $$ P(A,B) = P(A)P(B) $$
 
 $$ P(A|B) = P(A|\lnot B) = P(A) $$
 
-B라는 증거가 있을 때, A가 일어날 확률의 변화가 없다면 B는 '생뚱맞은' 증거인 셈이다. 또한, 이처럼 독립이라면 $P()$ 내부의 **콤마가 곱으로 분리**되는 것이 특징이다.
+B라는 증거가 있을 때, A가 일어날 확률의 변화가 없다면 B는 '생뚱맞은' 증거인 셈이다. 또한, 이처럼 독립이라면 $P()$ 내부의 **콤마를 곱으로 분리**할 수 있다.
 
 - $A$ and $C$ are independent given $B$ iff
 
