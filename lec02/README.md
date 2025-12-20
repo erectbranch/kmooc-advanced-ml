@@ -17,9 +17,9 @@
 | N | F | T | 0.01 |
 | N | F | F | 0.61 |
 
-예를 들어, Heavy Traffic일 확률은 0.01 + 0.02 + 0.16 + 0.12이다. 
+(예제 1) Heavy Traffic일 확률: 0.01 + 0.02 + 0.16 + 0.12이다. 
 
-다른 예시로, 공사(Construction)가 있는 상황에서의 Heavy Traffic일 확률, 즉 `P(Traffic=H | Construction=T)`는 다음과 같이 계산한다.
+(예제 2) 공사(Construction) 중인 상황에서의 Heavy Traffic일 확률, 즉 `P(Traffic=H | Construction=T)`는 다음과 같이 계산한다.
 
 - 분자: 0.01 + 0.02 = 0.03
 
@@ -27,7 +27,7 @@
 
 - 답: 1/3
 
-이처럼 어떠한 관찰, '어떠한 증거가 있는 상황에서의 (조건부) 확률'을 구하는 방법을 **Probabilistic Reasoning**이라고 한다.
+이처럼 어떠한 관찰, '어떠한 증거가 있는 상황에서의 (조건부) 확률'을 구하는 과정을 **Probabilistic Reasoning**(확률적 추론)이라고 한다.
 
 ---
 
@@ -37,9 +37,11 @@
 
 - 모든 경우의 수: $3^{15} = 14,348,907$ 개 (즉, 데이터가 1400만 개가 필요하다.)
 
-현재 1만 개 데이터만 확보하여 데이터가 부족한 상황이어도, Bayesian Network를 활용해 확률 추론이 가능하다. 이때 필요한 것은 **사전지식**(Expert Knowledges)과 **가정**이다.
+현재 1만 개 데이터만 확보하여 데이터가 부족한 상황이어도, Bayesian Network를 활용하면 확률적 추론이 가능하다.
 
-**Probability(Statistics)** + **Expert Knowledge on Direct Cause** + **Some Assumption on Independency**
+- 이때 필요한 것은 **사전지식**(Expert Knowledges)과 **가정**이다.
+
+  **Probability(Statistics)** + **Expert Knowledge on Direct Cause** + **Some Assumption on Independency**
 
 > 여기서 말하는 지식이란, 여러 사건(events) 사이의 직접 원인(**direct cause**)을 뜻한다.
 
@@ -175,17 +177,19 @@ $$ P(X|W, parent(X)) = P(X|parent(X)) $$
 
 $A$ 와 $B$ 사이 undirected path의 어떤 노드 $V$ 가 세 가지 조건 중 하나를 만족하면, $A$ 와 $B$ 는 **d-separation**이다.
 
-- 조건 1: $V$ 가 하나의 incoming arrow와 outgoing arrow를 가지며, $V$ 가 given.
+- 조건 1(**chain**): $V$ 가 하나의 incoming arrow와 outgoing arrow를 가지며, $V$ 가 given.
 
-- 조건 2: $V$ 가 두 개의 outgoing arrow를 가지며, $V$ 가 given.
+- 조건 2(**fork**): $V$ 가 두 개의 outgoing arrow를 가지며, $V$ 가 given.
 
-- 조건 3: $V$ 가 두 개의 incoming arrow와 descendant $W$ 를 가지며, $V$ 가 given이 아님
+- 조건 3(**collider**): $V$ 가 두 개의 incoming arrow와 descendant $W$ 를 가지며, $V$ 혹은 $W$ 가 given이 아님 ( $W$ 는 없을 수 있음)
+
+> 조건 3에서 descendant가 없다면, descendant가 주어지지 않았다고 해석하면 된다.
 
 | | |
 | :---: | :---: |
 | ![bayesian example 2](images/bayesian_nodes_example_2.png) | $P(A,B\|V) = P(A\|V)P(B\|V)$ |
 | ![bayesian example 3](images/bayesian_nodes_example_3.png) | $P(A,B\|V) = P(A\|V)P(B\|V)$ |
-| ![bayesian example 4](images/bayesian_nodes_example_4.png) |  |
+| ![bayesian example 4](images/bayesian_nodes_example_4.png) | $P(A,B) = P(A) P(B)$ |
 
 ---
 
