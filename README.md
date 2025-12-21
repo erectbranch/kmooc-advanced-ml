@@ -25,7 +25,11 @@ Lecture notes for courses [Advanced machine learning](https://www.kmooc.kr/view/
 
 - [Bayesian Network Overview](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec02)
 
-  > Probabilistic Reasoning, Bayesian Network
+  > Probabilistic Reasoning, Bayesian Network, d-separation
+
+- [Inference in Bayesian Networks](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec03)
+
+  > Inference in Bayesian Networks, Inference in Polytrees
 
 - [Hidden Markov Model Overview](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec04)
 
