@@ -39,6 +39,10 @@ Lecture notes for courses [Advanced machine learning](https://www.kmooc.kr/view/
 
   > Non-Linear SVM, Kernel Trick
 
+- [Random Forest](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec10)
+
+  > Bagging, Random Forest, Out-Of-Bag Error
+
 - [Gaussian Process](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec12)
 
   > Gaussian Distribution, Covariance Matrix, Gaussian Process
