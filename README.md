@@ -35,6 +35,10 @@ Lecture notes for courses [Advanced machine learning](https://www.kmooc.kr/view/
 
   > Markov Model, Hidden Markov Model
 
+- [Estimation of HMM](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec05)
+
+  > Baum-Welch Algorithm, Viterbi Algorithm
+
 - [Non-Linear SVM](https://github.com/erectbranch/kmooc-advanced-ml/tree/master/lec09)
 
   > Non-Linear SVM, Kernel Trick
