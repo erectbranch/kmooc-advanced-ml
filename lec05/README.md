@@ -161,10 +161,10 @@ $$ q_t^{\ast} = \psi_{t+1}(q_{t+1}^{\ast}) $$
 
 ![HMM example 1](images/hmm_example_1.png)
 
-- 새로운 문자열 `CBABCABCBABCA`을 각 HMM에 대입하면, 각 모델이 문자열을 생성했을 확률을 얻을 수 있다. ( $P_A, P_B$ )
+**(2)** 새로운 문자열 `CBABCABCBABCA`을 각 HMM에 대입하여, 각 모델이 문자열을 생성했을 확률 획득 ( $P_A, P_B$ )
 
 ![HMM example 2](images/hmm_example_2.png)
 
-> $P_A, P_B$ 중 값이 큰 쪽을 고르면 된다.
+**(3)** $P_A, P_B$ 중 큰 값을 선택
 
 ---
